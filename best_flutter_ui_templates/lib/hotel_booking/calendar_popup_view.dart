@@ -62,6 +62,7 @@ class _CalendarPopupViewState extends State<CalendarPopupView>
         body: AnimatedBuilder(
           animation: animationController!,
           builder: (BuildContext context, Widget? child) {
+            var backgroundColor;
             return AnimatedOpacity(
               duration: const Duration(milliseconds: 100),
               opacity: animationController!.value,
@@ -80,7 +81,7 @@ class _CalendarPopupViewState extends State<CalendarPopupView>
                     padding: const EdgeInsets.all(24.0),
                     child: Container(
                       decoration: BoxDecoration(
-                        color: HotelAppTheme.buildLightTheme().backgroundColor,
+                        color: HotelAppTheme.buildLightTheme().colorScheme.background,
                         borderRadius:
                             const BorderRadius.all(Radius.circular(24.0)),
                         boxShadow: <BoxShadow>[
